@@ -30,11 +30,11 @@ public class WeeklyPeerEvaluationReport {
     }
 
     public List<PeerEvaluationAverage> getPeerEvaluationAverages() {
-        return peerEvaluationAverages == null ? List.of() : List.copyOf(peerEvaluationAverages);
+        return peerEvaluationAverages;
     }
 
     public void setPeerEvaluationAverages(List<PeerEvaluationAverage> peerEvaluationAverages) {
-        this.peerEvaluationAverages = peerEvaluationAverages == null ? null : List.copyOf(peerEvaluationAverages);
+        this.peerEvaluationAverages = peerEvaluationAverages;
     }
 
 }

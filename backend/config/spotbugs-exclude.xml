@@ -107,4 +107,8 @@
          user reference. Copying a managed user would change its identity.
          This exception applies only to the peerEvaluationUser field. -->
     <Match><Class name="team.projectpulse.user.MyUserPrincipal"/><Field name="peerEvaluationUser"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- D1: Evaluation report collections remain mutable because report-building
+         code appends results, and null has meaning in existing API responses. -->
+    <Match><Class name="team.projectpulse.evaluation.PeerEvaluationAverage"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <Match><Class name="team.projectpulse.evaluation.WeeklyPeerEvaluationReport"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
 </FindBugsFilter>
