@@ -4,7 +4,10 @@ import team.projectpulse.course.Course;
 import org.springframework.data.jpa.domain.Specification;
 import java.util.Locale;
 
-public class InstructorSpecs {
+public final class InstructorSpecs {
+
+    private InstructorSpecs() {
+    }
 
     public static Specification<Instructor> hasFirstName(String providedFirstName) {
         return (root, query, criteriaBuilder) ->
