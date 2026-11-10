@@ -25,5 +25,9 @@
              obscure that contract. We do not enforce these two rules. -->
         <exclude name="UncommentedEmptyConstructor"/>
         <exclude name="UnnecessaryConstructor"/>
+        <!-- D3: Permit concise single-statement conditionals.
+             Mandatory braces would create 30 formatting-only changes
+             across existing guard clauses and converters. -->
+        <exclude name="ControlStatementBraces"/>
     </rule>
 </ruleset>
