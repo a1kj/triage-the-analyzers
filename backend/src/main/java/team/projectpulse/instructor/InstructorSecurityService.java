@@ -40,10 +40,7 @@ public class InstructorSecurityService {
     public boolean isCurrentUserAdminOfInstructorCourse(Integer instructorId) {
         Integer adminIdFromJwt = this.userUtils.getUserId();
         Instructor instructor = this.instructorRepository.findById(instructorId).orElse(null);
-        if (instructor == null) {
-            return false;
-        }
-        return instructor.getCourses().stream()
+        return instructor != null && instructor.getCourses().stream()
                 .anyMatch(course -> course.getCourseAdmin().getId().equals(adminIdFromJwt));
     }
 

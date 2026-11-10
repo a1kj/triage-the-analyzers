@@ -7,4 +7,108 @@
 
      Unlike the baseline, this file may grow, but every entry is a reviewed decision. -->
 <FindBugsFilter>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.activity.Activity"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.activity.ActivityController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.course.Course"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.course.CourseController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.evaluation.EvaluationController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.evaluation.PeerEvaluation"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.evaluation.Rating"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.instructor.Instructor"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.instructor.InstructorController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.instructor.InstructorService"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.notification.ReminderController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.notification.SubmissionStatusService"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.notification.WeeklyReminderScheduler"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.collaboration.Comment"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.ram.collaboration.CommentController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.collaboration.CommentThread"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.document.DocumentSection"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.document.DocumentSectionLock"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.ram.document.DocumentSectionService"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.document.RequirementDocument"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.ram.glossary.GlossaryService"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.requirement.ArtifactKeySequence"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.requirement.ArtifactLink"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.ram.requirement.ArtifactLinkController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.requirement.RequirementArtifact"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.ram.requirement.RequirementArtifactController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.usecase.UseCase"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.usecase.UseCaseExtension"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.usecase.UseCaseExtensionStep"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.usecase.UseCaseLock"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.ram.usecase.UseCaseMainStep"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.ram.usecase.UseCaseService"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.rubric.Criterion"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.rubric.CriterionController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.rubric.Rubric"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.rubric.RubricController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.section.Section"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.section.SectionController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.section.SectionService"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.seed.DataInitializer"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.student.Student"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.student.StudentController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.student.StudentService"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- JPA entity: persistence identity and managed relationships are intentionally shared. -->
+    <Match><Class name="team.projectpulse.team.Team"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.team.TeamController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.user.resetpassword.ResetPasswordService"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.user.UserController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
+    <Match><Class name="team.projectpulse.user.UserService"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- D1: Spring Security's principal intentionally holds the authenticated
+         user reference. Copying a managed user would change its identity.
+         This exception applies only to the peerEvaluationUser field. -->
+    <Match><Class name="team.projectpulse.user.MyUserPrincipal"/><Field name="peerEvaluationUser"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- D1: Evaluation report collections remain mutable because report-building
+         code appends results, and null has meaning in existing API responses. -->
+    <Match><Class name="team.projectpulse.evaluation.PeerEvaluationAverage"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <Match><Class name="team.projectpulse.evaluation.WeeklyPeerEvaluationReport"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
 </FindBugsFilter>
