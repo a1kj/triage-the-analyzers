@@ -103,4 +103,8 @@
     <Match><Class name="team.projectpulse.user.UserController"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
     <!-- Spring component: dependency-injected collaborators retain framework-managed identity. -->
     <Match><Class name="team.projectpulse.user.UserService"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+    <!-- D1: Spring Security's principal intentionally holds the authenticated
+         user reference. Copying a managed user would change its identity.
+         This exception applies only to the peerEvaluationUser field. -->
+    <Match><Class name="team.projectpulse.user.MyUserPrincipal"/><Field name="peerEvaluationUser"/><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
 </FindBugsFilter>

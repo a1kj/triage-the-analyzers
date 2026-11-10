@@ -76,27 +76,27 @@ public class PeerEvaluationAverage {
     }
 
     public List<String> getPublicComments() {
-        return publicComments;
+        return publicComments == null ? List.of() : List.copyOf(publicComments);
     }
 
     public void setPublicComments(List<String> publicComments) {
-        this.publicComments = publicComments;
+        this.publicComments = publicComments == null ? null : List.copyOf(publicComments);
     }
 
     public List<String> getPrivateComments() {
-        return privateComments;
+        return privateComments == null ? List.of() : List.copyOf(privateComments);
     }
 
     public void setPrivateComments(List<String> privateComments) {
-        this.privateComments = privateComments;
+        this.privateComments = privateComments == null ? null : List.copyOf(privateComments);
     }
 
     public List<RatingAverage> getRatingAverages() {
-        return ratingAverages;
+        return ratingAverages == null ? List.of() : List.copyOf(ratingAverages);
     }
 
     public void setRatingAverages(List<RatingAverage> ratingAverages) {
-        this.ratingAverages = ratingAverages;
+        this.ratingAverages = ratingAverages == null ? null : List.copyOf(ratingAverages);
     }
 
 }
